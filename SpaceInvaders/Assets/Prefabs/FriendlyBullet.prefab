@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3873056689725614201}
   - component: {fileID: 3873056689725614200}
   - component: {fileID: 3873056689725614203}
+  - component: {fileID: 1019918080104696306}
+  - component: {fileID: 8844565433248672696}
   m_Layer: 0
   m_Name: FriendlyBullet
   m_TagString: Untagged
@@ -111,3 +113,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.061123908, y: 0.3736241}
   m_EdgeRadius: 0
+--- !u!114 &1019918080104696306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873056689725614202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa791ae1520441199cb4d1f47a71f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8844565433248672696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873056689725614202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23b15caab0524fdd95df85bb73fc591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
