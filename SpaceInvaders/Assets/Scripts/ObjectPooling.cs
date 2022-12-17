@@ -6,7 +6,7 @@ public class ObjectPooling : MonoBehaviour
 {
     private Queue<GameObject> pooledObjects;
 
-    private int poolSize = 5;
+    public int poolSize;
     [SerializeField] private GameObject objPrefab;
 
     private void Awake()
@@ -28,7 +28,4 @@ public class ObjectPooling : MonoBehaviour
 
         return obj;
     }
-
-
-
 }
