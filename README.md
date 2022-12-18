@@ -1,2 +1,7 @@
 # SpaceInvaders
- Space Invaders Game Prototype
+
+* Object Pooling
+* Singleton Design Patterns
+* Gyro Sensor Control
+* Sprite Animations
+* UI Panel Design
