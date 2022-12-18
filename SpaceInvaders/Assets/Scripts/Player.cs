@@ -6,18 +6,29 @@ public class Player : MonoBehaviour
 {
     //public GameObject bulletPrefab;
 
-    private const float max_X = 2.5f;
-    private const float min_X = -2.5f;
+    private const float max_X = 3.5f;
+    private const float min_X = -3.5f;
 
     private float speed = 3.0f;
     private bool isShooting;
 
     [SerializeField] private ObjectPooling objPooling = null;
 
+    public ShipStats shipStats;
+
+    private Vector2 offScreenPos = new Vector2(0, -20f);
+    private Vector2 startPos = new Vector2(0, -5.7f);
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        shipStats.currentHealth = shipStats.maxHealth;
+        shipStats.currentLife = shipStats.maxLife;
+
+        transform.position = startPos;
+
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
+        UIManager.UpdateLives(shipStats.currentLife);
     }
 
     // Update is called once per frame
@@ -51,5 +62,44 @@ public class Player : MonoBehaviour
         isShooting = false;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            collision.gameObject.SetActive(false);
+            TakeDamage();
+        }
+    }
 
+    private IEnumerator Respawn()
+    {
+        transform.position = offScreenPos;
+        yield return new WaitForSeconds(2);
+
+        shipStats.currentHealth = shipStats.maxHealth;
+        transform.position = startPos;
+
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
+    }
+
+    public void TakeDamage()
+    {
+        shipStats.currentHealth--;
+        UIManager.UpdateHealthBar(shipStats.currentHealth);
+
+        if (shipStats.currentHealth <= 0)
+        {
+            shipStats.currentLife--;
+            UIManager.UpdateLives(shipStats.currentLife);
+
+            if (shipStats.currentLife <= 0)
+            {
+                Debug.Log("Game Over");
+            }
+            else
+            {
+                StartCoroutine(Respawn());
+            }
+        }
+    }    
 }
