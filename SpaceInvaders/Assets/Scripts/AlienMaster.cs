@@ -9,8 +9,8 @@ public class AlienMaster : MonoBehaviour
     private Vector3 hMoveDist = new Vector3(0.05f, 0, 0);
     private Vector3 vMoveDist = new Vector3(0, 0.15f, 0);
 
-    private const float maxLeft = -3f;
-    private const float maxRight = 3f;
+    private const float maxLeft = -3.5f;
+    private const float maxRight = 3.5f;
 
     public static List<GameObject> allAliens = new List<GameObject>();
 
@@ -25,10 +25,13 @@ public class AlienMaster : MonoBehaviour
     [SerializeField] private ObjectPooling objPool = null;
 
     public GameObject motherShip;
-    private Vector3 motherShipPos = new Vector3(4.5f, 3.3f, 0);
+    private Vector3 motherShipPos = new Vector3(4.5f, 4f, 0);
     private float motherShipTimer = 1f;
     private const float motherShip_Min = 15f;
     private const float motherShip_Max = 60f;
+
+    private bool entering = true;
+    private const float startY = 1.7f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,26 +45,38 @@ public class AlienMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Control Aliens Moving
-        if (moveTimer <= 0)
+        if (entering)
         {
-            MoveAliens();
-        }
-        moveTimer -= Time.deltaTime;
+            transform.Translate(Vector2.down * Time.deltaTime * 10);
 
-        //Control Aliens Shooting
-        if (shootTimer <=0)
-        {
-            AlienShoot();
+            if (transform.position.y <= startY)
+            {
+                entering = false;
+            }
         }
-        shootTimer -= Time.deltaTime;
+        else
+        {
+            //Control Aliens Moving
+            if (moveTimer <= 0)
+            {
+                MoveAliens();
+            }
+            moveTimer -= Time.deltaTime;
 
-        //Control MotherShip Spawning
-        if(motherShipTimer < 0)
-        {
-            MotherShipSpawner();
+            //Control Aliens Shooting
+            if (shootTimer <= 0)
+            {
+                AlienShoot();
+            }
+            shootTimer -= Time.deltaTime;
+
+            //Control MotherShip Spawning
+            if (motherShipTimer < 0)
+            {
+                MotherShipSpawner();
+            }
+            motherShipTimer -= Time.deltaTime;
         }
-        motherShipTimer -= Time.deltaTime;
     }
 
     private void MoveAliens()

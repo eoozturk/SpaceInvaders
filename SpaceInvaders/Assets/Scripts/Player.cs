@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private Vector2 offScreenPos = new Vector2(0, -20f);
     private Vector2 startPos = new Vector2(0, -5.7f);
 
+    private float dirx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,26 @@ public class Player : MonoBehaviour
             StartCoroutine(Shoot());
         }
 #endif
+        //Gyro Sensor Control on Mobile Phone
+        dirx = Input.acceleration.x;
+
+        if (dirx <= -0.1f && transform.position.x > min_X)
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
+        }
+        else if (dirx >= 0.1f && transform.position.x < max_X)
+        {
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
+        }
+    }
+
+    //Shoot with Button on Mobile Phone
+    public void ShootButton()
+    {
+        if (!isShooting)
+        {
+            StartCoroutine(Shoot());
+        }
     }
 
     private IEnumerator Shoot()
