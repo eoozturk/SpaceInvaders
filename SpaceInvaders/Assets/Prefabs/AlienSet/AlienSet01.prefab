@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6538079623132985527}
   - component: {fileID: 6538079623132985513}
   m_Layer: 0
-  m_Name: AlienMaster
+  m_Name: AlienSet01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
