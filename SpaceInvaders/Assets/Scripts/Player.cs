@@ -74,6 +74,32 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddHealth()
+    {
+        if (shipStats.currentHealth == shipStats.maxHealth)
+        {
+            UIManager.UpdateScore(250);
+        }
+        else
+        {
+            shipStats.currentHealth++;
+            UIManager.UpdateHealthBar(shipStats.currentHealth);
+        }
+    }
+
+    public void AddLifes()
+    {
+        if (shipStats.currentLife == shipStats.maxLife)
+        {
+            UIManager.UpdateScore(1000);
+        }
+        else
+        {
+            shipStats.currentLife++;
+            UIManager.UpdateHealthBar(shipStats.currentLife);
+        }
+    }
+
     private IEnumerator Shoot()
     {
         isShooting = true;
