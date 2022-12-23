@@ -5,3 +5,5 @@
 * Gyro Sensor Control
 * Sprite Animations
 * UI Panel Design
+* Pickup Systems
+* Spawn and Respawn
