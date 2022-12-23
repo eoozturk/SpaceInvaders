@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
         else
         {
             shipStats.currentLife++;
-            UIManager.UpdateHealthBar(shipStats.currentLife);
+            UIManager.UpdateLives(shipStats.currentLife);
         }
     }
 

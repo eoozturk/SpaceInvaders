@@ -227,7 +227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000
+  m_Text: 000000
 --- !u!222 &76954602
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.23909755, g: 0.24488252, b: 0.254717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1532,9 +1532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allAlienSets:
   - {fileID: 6538079623132985524, guid: 125631c3dd50a467790152ee2501974b, type: 3}
-  - {fileID: 218490194036336023, guid: f456756df804d44698cf6d3fe3c7ebf7, type: 3}
-  - {fileID: 3227338204696381370, guid: 67813ff3c27824f76aaff9c889e68cb8, type: 3}
-  - {fileID: 5833169958381945419, guid: 2bd46ad950f7a424297d3cb27d00cc15, type: 3}
+  - {fileID: 1659563095093676939, guid: f456756df804d44698cf6d3fe3c7ebf7, type: 3}
+  - {fileID: 2436165899622659021, guid: 67813ff3c27824f76aaff9c889e68cb8, type: 3}
 --- !u!4 &1572485460
 Transform:
   m_ObjectHideFlags: 0

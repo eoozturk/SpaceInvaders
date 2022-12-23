@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     private float speed = 10f;
-
    
     // Update is called once per frame
     void Update()

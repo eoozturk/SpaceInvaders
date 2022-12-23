@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     private static UIManager instance;
-
-
     private int score, highScore, wave;
-
     public Text scoreText, highScoreText, coinText, waveText;
 
     public Image[] lifeSprites;
@@ -18,7 +15,6 @@ public class UIManager : MonoBehaviour
 
     private Color32 active = new Color(1, 1, 1, 1);
     private Color32 inactive = new Color(1, 1,1 , 0.25f);
-
 
     private void Awake()
     {
@@ -53,22 +49,22 @@ public class UIManager : MonoBehaviour
     public static void UpdateScore(int s)
     {
         instance.score += s;
-        instance.scoreText.text = instance.score.ToString();
+        instance.scoreText.text = instance.score.ToString("000000");
     }
 
     public static void UpdateHighScore()
     {
-        
+        //TO DO
     }
 
     public static void UpdateWave()
     {
         instance.wave++;
-        instance.waveText.text = instance.wave.ToString();
+        instance.waveText.text = instance.wave.ToString("0000");
     }
 
     public static void UpdateCoin()
     {
-
+        instance.coinText.text = Inventory.currentCoins.ToString("0000");
     }
 }

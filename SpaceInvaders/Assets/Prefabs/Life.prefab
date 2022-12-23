@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9216207170274437701}
   - component: {fileID: 9216207170274437700}
   - component: {fileID: 9216207170274437703}
+  - component: {fileID: -172316167825863517}
+  - component: {fileID: -5024825169378862177}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -154,3 +156,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-172316167825863517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216207170274437702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 528498d58ef574992bf908a4908686a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 7
+--- !u!114 &-5024825169378862177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216207170274437702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c90e4b4bbb6d459e825efb6c17c17c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 3

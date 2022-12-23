@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9190793786533447473}
   - component: {fileID: 9190793786533447472}
   - component: {fileID: 9190793786533447471}
+  - component: {fileID: -6330364758215120325}
+  - component: {fileID: -1093459772274242158}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -154,3 +156,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5927615, y: 0.72850776}
   m_EdgeRadius: 0
+--- !u!114 &-6330364758215120325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190793786533447470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacec77c7d8fb4ea4ac7e06527dc47d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 7
+--- !u!114 &-1093459772274242158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190793786533447470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c90e4b4bbb6d459e825efb6c17c17c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 3

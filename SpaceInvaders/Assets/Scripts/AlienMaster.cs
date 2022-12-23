@@ -147,5 +147,4 @@ public class AlienMaster : MonoBehaviour
         Instantiate(motherShip, motherShipPos, Quaternion.identity);
         motherShipTimer = Random.Range(motherShip_Min, motherShip_Max);
     }
-
 }
